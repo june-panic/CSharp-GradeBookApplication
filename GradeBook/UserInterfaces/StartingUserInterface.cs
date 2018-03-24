@@ -40,7 +40,7 @@ namespace GradeBook.UserInterfaces
             }
             var name = parts[1];
             var gradeBookType = parts[2];
-            BaseGradeBook gradeBook = new BaseGradeBook(name);
+            BaseGradeBook gradeBook = null;
             switch(gradeBookType)
             {
                 case "standard":
