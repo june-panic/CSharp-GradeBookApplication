@@ -7,8 +7,8 @@ namespace GradeBook.GradeBooks
 {
     public class RankedGradeBook : BaseGradeBook
     {
-        public RankedGradeBook(string name)
-            : base(name)
+        public RankedGradeBook(string name, bool isWeighted)
+            : base(name, isWeighted)
         {
             Type = GradeBookType.Ranked;
         }
@@ -24,11 +24,11 @@ namespace GradeBook.GradeBooks
 
             if (rankedGrade <= numStudentsPer20Percent)
                 return 'A';
-            else if(rankedGrade <= numStudentsPer20Percent * 2)
+            else if (rankedGrade <= numStudentsPer20Percent * 2)
                 return 'B';
-            else if(rankedGrade <= numStudentsPer20Percent * 3)
+            else if (rankedGrade <= numStudentsPer20Percent * 3)
                 return 'C';
-            else if(rankedGrade <= numStudentsPer20Percent * 4)
+            else if (rankedGrade <= numStudentsPer20Percent * 4)
                 return 'D';
 
             return 'F';
@@ -41,7 +41,7 @@ namespace GradeBook.GradeBooks
                 Console.WriteLine("Ranked grading requires at least 5 students with grades in order to properly calculate a student's overall grade.");
                 return;
             }
-            
+
             base.CalculateStatistics();
         }
 

@@ -1,14 +1,15 @@
 
 using GradeBook.Enums;
 
-namespace GradeBook.GradeBooks {
-public class StandardGradeBook : BaseGradeBook
+namespace GradeBook.GradeBooks
 {
-    public StandardGradeBook(string name)
-        : base(name)
+    public class StandardGradeBook : BaseGradeBook
     {
-        Type = GradeBookType.Standard;
+        public StandardGradeBook(string name, bool isWeighted)
+            : base(name, isWeighted)
+        {
+            Type = GradeBookType.Standard;
+        }
     }
-}
 
 }
